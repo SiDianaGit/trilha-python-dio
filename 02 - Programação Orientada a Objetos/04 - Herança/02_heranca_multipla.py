@@ -25,8 +25,11 @@ class Ave(Animal):
 class Gato(Mamifero):
     pass
 
+class FalarMixin:
+    def falar(self):
+        print("oi estou falando")
 
-class Ornitorrinco(Mamifero, Ave):
+class Ornitorrinco(Mamifero, Ave, FalarMixin):
     def __init__(self, cor_bico, cor_pelo, nro_patas):
         super().__init__(cor_pelo=cor_pelo, cor_bico=cor_bico, nro_patas=nro_patas)
         print(Ornitorrinco.__mro__)  # exibe a ordem que o python executou as classes
@@ -38,3 +41,4 @@ print(gato)
 
 ornitorrinco = Ornitorrinco(nro_patas=2, cor_pelo="vermelho", cor_bico="laranja")
 print(ornitorrinco)
+print(ornitorrinco.falar())
