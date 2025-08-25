@@ -1,5 +1,6 @@
 class Conta:
     def __init__(self, nro_agencia, saldo=0):
+        # _saldo é privado e deve ser acessado somente dentro da classe. As operações devem ser feitas pelos métodos.
         self._saldo = saldo
         self.nro_agencia = nro_agencia
 
