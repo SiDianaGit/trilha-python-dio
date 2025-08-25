@@ -1,10 +1,13 @@
 class Bicicleta:
+    #construtor
+    #o valor "self" é uma convensão para instanciar no python (em outras linguagens é this) que deve ser informado em todos os métodos
     def __init__(self, cor, modelo, ano, valor):
         self.cor = cor
         self.modelo = modelo
         self.ano = ano
         self.valor = valor
 
+    #metodos
     def buzinar(self):
         print("Plim plim...")
 
@@ -15,6 +18,7 @@ class Bicicleta:
     def correr(self):
         print("Vrummmmm...")
 
+    # Para obter os valores de uma instancia desta classe, visualizando os atributos pelo "dict" Dicionário
     def __str__(self):
         return f"{self.__class__.__name__}: {', '.join([f'{chave}={valor}' for chave, valor in self.__dict__.items()])}"
 
