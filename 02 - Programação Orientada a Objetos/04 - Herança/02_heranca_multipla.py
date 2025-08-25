@@ -25,6 +25,7 @@ class Ave(Animal):
 class Gato(Mamifero):
     pass
 
+# muito usado no Jungle
 class FalarMixin:
     def falar(self):
         print("oi estou falando")
