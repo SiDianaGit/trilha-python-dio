@@ -23,3 +23,11 @@ mostrar_valores(aluno_1, aluno_2)
 Estudante.escola = "Python"
 aluno_3 = Estudante("Chappie", 3)
 mostrar_valores(aluno_1, aluno_2, aluno_3)
+
+
+### Resultado ###
+# Guilherme - 1 - DIO
+# Giovanna - 2 - DIO
+# Guilherme - 1 - Python
+# Giovanna - 2 - Python
+# Chappie - 3 - Python
