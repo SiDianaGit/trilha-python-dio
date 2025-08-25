@@ -1,7 +1,9 @@
 class Estudante:
+    # atributo de classe. Alterando este valor, ele reflete em todos os objetos/instancias criadas
     escola = "DIO"
 
     def __init__(self, nome, matricula):
+        # atributos de instancia
         self.nome = nome
         self.matricula = matricula
 
