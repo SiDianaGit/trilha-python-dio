@@ -4,6 +4,10 @@ class Pessoa:
         self._ano_nascimento = ano_nascimento
 
     @property
+    def nome(nome):
+        return self._nome
+    
+    @property
     def idade(self):
         # atributo privado
         _ano_atual = 2022
