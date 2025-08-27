@@ -58,3 +58,40 @@ controle = ControleArCondicionado()
 controle.ligar()
 controle.desligar()
 print(controle.marca)
+
+
+
+
+
+class MinhaABC(ABC):
+    def metodo_concreto(self):
+        # Este é um método concreto, não abstrato
+        print("Este é um método concreto")
+
+    @abstractmethod
+    def metodo_abstrato(self):
+        # Este é um método abstrato, deve ser implementado nas subclasses
+        pass
+
+    @property
+    @abstractmethod
+    def propriedade_abstrata(self):
+        # Esta é uma propriedade abstrata
+        pass
+
+class MinhaClasseConcreta(MinhaABC):
+    def metodo_abstrato(self):
+        print("Implementação do método abstrato")
+
+    @property
+    def propriedade_abstrata(self):
+        return "Valor da propriedade abstrata"
+
+# Não é possível instanciar MinhaABC diretamente se tiver métodos abstratos não implementados
+# abc_instance = MinhaABC() # Isso geraria um TypeError
+
+# É possível instanciar MinhaClasseConcreta porque ela implementa os métodos abstratos
+instancia_concreta = MinhaClasseConcreta()
+instancia_concreta.metodo_concreto()
+instancia_concreta.metodo_abstrato()
+print(instancia_concreta.propriedade_abstrata)
