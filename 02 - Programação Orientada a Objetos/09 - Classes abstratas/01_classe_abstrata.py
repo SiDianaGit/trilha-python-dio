@@ -1,6 +1,9 @@
+# Classe abstrata (ou Interface) não é instanciada. Não permite herança multipla. Serve para compor comportamentos. Não possui uma palavra reservada para interface.
+# Módulo ABD (abstracted basic class)
+
 from abc import ABC, abstractmethod, abstractproperty
 
-
+# a classe pai não tem corpo em seus métodos.  E todas as classes filhas são obrigadas a ter uma definição em cada um de seus métodos replicados (neste caso os 2 metodos). Dá segurança para fazer polimorfirmos.
 class ControleRemoto(ABC):
     @abstractmethod
     def ligar(self):
@@ -10,6 +13,7 @@ class ControleRemoto(ABC):
     def desligar(self):
         pass
 
+    #forçando a obrigatoriedade de propriedade dentro de cada classe filha
     @property
     @abstractproperty
     def marca(self):
