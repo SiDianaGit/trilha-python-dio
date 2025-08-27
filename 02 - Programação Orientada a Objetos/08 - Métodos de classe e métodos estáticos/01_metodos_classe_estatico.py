@@ -9,7 +9,7 @@ class Pessoa:
         idade = 2022 - ano
         return cls(nome, idade)
 
-    #metodo estatico, não precisa do contexto da classe
+    #metodo estatico, não precisa do contexto da classe. É um método independente.
     @staticmethod
     def e_maior_idade(idade):
         return idade >= 18
